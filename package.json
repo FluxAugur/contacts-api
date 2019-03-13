@@ -1,0 +1,43 @@
+{
+  "name": "contacts-api",
+  "version": "1.0.0",
+  "description": "Contacts API",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FluxAugur/contacts_api"
+  },
+  "author": "Nathanial L. McConnell",
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "aws",
+    "lamdas",
+    "serverless",
+    "dynamodb",
+    "jest",
+    "es6",
+    "docker"
+  ],
+  "scripts": {
+    "sls": "serverless",
+    "seed": "node ./seed/runner.js",
+    "start": "sls offline start",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "deploy": "serverless deploy --aws-profile serverless",
+    "package": "serverless package",
+    "remove": "serverless remove"
+  },
+  "engines": {
+    "node": "~8.10.0"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.375.0",
+    "jest": "^23.6.0",
+    "serverless": "^1.34.1",
+    "serverless-offline": "^3.31.3"
+  }
+}

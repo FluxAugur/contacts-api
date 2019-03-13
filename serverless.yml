@@ -1,0 +1,17 @@
+service: contacts-api
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+
+functions:
+  - "${file(src/handlers/contacts/contacts.serverless.yml)}"
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    host: 0.0.0.0 # for docker container hosting
