@@ -1,6 +1,13 @@
-const { DocumentClient } = require('aws-sdk/clients/dynamodb');
+const {
+  DocumentClient
+} = require('aws-sdk/clients/dynamodb');
 
-const withProcessEnv = ({ AWS_ENDPOINT, AWS_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY }) => () => {
+const withProcessEnv = ({
+  AWS_ENDPOINT,
+  AWS_REGION,
+  AWS_ACCESS_KEY_ID,
+  AWS_SECRET_ACCESS_KEY
+}) => () => {
   const options = {
     endpoint: AWS_ENDPOINT,
     region: AWS_REGION,

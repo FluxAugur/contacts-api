@@ -69,8 +69,6 @@ describe('Contacts', () => {
     withStatusCode: (stat, fn) => mockWithStatusCode
   }
 
-  const mockParseWith = jest.fn()
-
   jest.mock('aws-sdk/clients/dynamodb', () => ({
     DocumentClient: jest.fn()
   }))
